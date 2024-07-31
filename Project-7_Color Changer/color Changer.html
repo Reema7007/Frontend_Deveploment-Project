@@ -1,0 +1,107 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta charset= "UTF-8">
+	<title>DOM-Project Color changer</title>
+<style>
+html{
+	margin:0;
+}
+span{
+display: block;
+}	
+.canvas{
+ margin: 100px auto 100px;
+  width: 80%;
+  text-align: center;
+}
+.button {
+  width: 100px;
+  height: 100px;
+  border: solid black 2px;
+  display: inline-block;
+}
+
+#green {
+  background: green;
+}
+
+#white {
+  background: white;
+}
+#blue {
+  background: blue;
+}
+#yellow {
+  background: yellow;
+}
+
+
+}	
+		
+</style>
+</head>
+<body style = "background-color: #212121; color: #fff;">
+	<div class="canvas">
+		<h1>Color Scheme Switcher</h1>
+		<span class="button" id="green"></span>
+		<span class="button" id="white"></span>
+		<span class="button" id="blue"></span>
+		<span class="button" id="yellow"></span>
+		<h2>
+			Try clicking on one of the colors above
+			<span>to change the background color of this page!</span>
+	</div>
+<script>
+const body= document.querySelector('body')
+const buttons= document.querySelectorAll('.button')
+
+buttons.forEach(function(button){
+	console.log(button)
+	button.addEventListener('click', function(e){
+	console.log(e)
+	console.log(e.target)
+	/*
+	if(e.target.id === 'green'){
+		body.style.backgroundColor='green'
+	}
+	if(e.target.id === 'white'){
+		body.style.backgroundColor='white'
+	}
+	if(e.target.id === 'blue'){
+		body.style.backgroundColor='blue'
+	}
+	if(e.target.id === 'yellow'){
+		body.style.backgroundColor='yellow'
+	}
+	})
+})
+*/
+
+switch(e.target.id){
+	case 'green':
+			body.style.backgroundColor='green';
+			break;
+	case 'white':
+			body.style.backgroundColor='white';
+			break;
+
+	case 'blue':
+			body.style.backgroundColor='blue';
+			break;
+			
+	case 'yellow':
+			body.style.backgroundColor='yellow';
+			break;
+			
+
+
+}
+
+	})
+})
+
+</script>
+</body>
+</html>
+
