@@ -8,3 +8,4 @@ Project include  HTML, CSS, JS:
 6. BMI Calculator
 7. Color changer
 8. Guess A Number Game
+9. Random Color
